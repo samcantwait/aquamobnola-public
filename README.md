@@ -18,7 +18,7 @@ Some of the features of the site include:
     &nbsp;&nbsp;&nbsp;&nbsp;-The gallery may be sorted based on show name or photographer name.\
     &nbsp;&nbsp;&nbsp;&nbsp;-The photo gallery accesses the database to perform all of the sorting options.\
     &nbsp;&nbsp;&nbsp;&nbsp;-When a photo is clicked, it will open in a modal where a larger version of the photo may be viewed along with the photo credit details.\
-    &nbsp;&nbsp;&nbsp;&nbsp;-The modal slides to the previous and next photos via on screen buttons or with touch events.\
+    &nbsp;&nbsp;&nbsp;&nbsp;-The modal slides to the previous and next photos via on-screen buttons or with touch events.\
     &nbsp;&nbsp;&nbsp;&nbsp;-All small and large photos are lazy loaded to prevent a large initial load on page start.
 
 This site uses Node.js, Express, MySQL, Sass, JavaScript, CSS, HTML, and EJS.
