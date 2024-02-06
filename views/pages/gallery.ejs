@@ -1,0 +1,52 @@
+<% layout('layout/boilerplate')%>
+    <title>Aquamob NOLA</title>
+    <script>
+        // Use var to declare variables in the global scope so they may be used in mainGallery.js.
+        var results = <%- JSON.stringify(photos) %>;
+        var showName = `<%- showName %>`;
+        var photographerName = `<%- photographerName %>`;
+        var allShows = <%- JSON.stringify(allShows) %>;
+        var allPhotographers = <%- JSON.stringify(allPhotographers) %>;
+    </script>
+        <script src="/js/mainGallery.js" defer></script>
+    </head>
+
+    <section class="main-gallery">
+        <h1 class="heading-primary">Photo Gallery</h1>
+        <div class="main-gallery__title-bar">
+            <h2 class="main-gallery__heading">
+            </h2>
+            <form action="/gallery" class="main-gallery__form custom-select" method="POST">
+                <label for="sort-select" class="main-gallery__label">View photos by: </label>
+                <select name="sort" id="sort-select" class="main-gallery__select" required>
+                    <option value="all-photos" class="main-gallery__option">All photos</option>
+                    <option value="" class="main-gallery__option main-gallery__option-title">Show-------</option>
+                    <!-- Populate the dropdown list with the names of all photographers and shows. -->
+                    <% allShows.forEach(show=> { %>
+                        <option value="showName=<%= show.name %>" class="main-gallery__option">
+                            <%= show.full_name %>
+                        </option>
+                        <% }) %>
+                        <option value="" class="main-gallery__option main-gallery__option-title">Photographer------
+                        </option>
+                        <% allPhotographers.forEach(photographer=> { %>
+                            <option value="photographerName=<%= photographer.name.toLowerCase() %>" class="main-gallery__option">
+                                <%= photographer.name %>
+                            </option>
+                            <% }) %>
+                </select>
+                <button class="main-gallery__submit">Go</button>
+            </form>
+        </div>
+        <!-- This empty div is where the photos will be inserted from the script. -->
+        <div class="photo-grid">
+
+        </div>
+        <div class="photo-grid__container"><button class="photo-grid__load btn-more">Load more</button></div>
+        <div class="photo-grid__modal">
+            <div class="photo-grid__prev photo-grid__button">&lt;</div>
+            <div class="photo-grid__next photo-grid__button">&gt;</div>
+            <div class="photo-grid__close">&#10006;</div>
+            <div class="photo-grid__modal-container"></div>
+        </div>
+    </section>

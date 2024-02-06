@@ -1,0 +1,16 @@
+<% layout('layout/boilerplate')%>
+    <title>Aquamob NOLA</title>
+    </head>
+
+    <body>
+        <section class="subscribed">
+            <h1 class="subscribed__heading heading--primary">Unsubscribe</h1>
+            <p class="subscribed__text">Are you sure you want to unsubscribe <span class="unsubscribe__email"><%= email %></span> from the mailing list?
+            </p>
+            <form action="/unsubscribe/<%= id %>" method="post">
+      <button type="submit" class="unsubscribe__button">
+        Yes, unsubscribe me
+      </button>
+    </form>
+            <p class="subscribed__text"><a href="/" class="subscribed__return">Return to homepage</a></p>
+        </section>
