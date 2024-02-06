@@ -1,0 +1,59 @@
+.header {
+  position: relative;
+  width: 100%;
+  margin-top: -7rem;
+  background-color: $color-black;
+  // z-index: 10;
+
+  @include responsive(change-menu) {
+    height: 100vh;
+  }
+
+  &__text-box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+    @include responsive(short) {
+      top: 50%;
+    }
+
+    @include responsive(shorter) {
+      top: 25rem;
+    }
+  }
+
+  &__subheading {
+    font-family: "Alumni Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    font-size: 4.5rem;
+
+    @include responsive(cast) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__img {
+    margin-top: 2rem;
+    width: 90%;
+
+    @include responsive(shorter) {
+      width: 50%;
+    }
+  }
+
+  &__title-lower {
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include responsive(short) {
+      bottom: 0;
+    }
+  }
+}
