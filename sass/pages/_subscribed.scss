@@ -1,0 +1,34 @@
+.subscribed {
+  width: 80%;
+  margin: 8rem auto;
+
+  &__mailto,
+  &__return {
+    text-decoration: underline;
+    text-underline-offset: 0.8rem;
+  }
+}
+
+.unsubscribe {
+  &__email {
+    font-weight: 600;
+  }
+
+  &__button {
+    display: block;
+    margin: 5rem auto;
+    padding: 1rem 2rem;
+    border: 3px solid $color-red-blood;
+    outline: none;
+    background-color: transparent;
+    color: $color-white;
+    font-size: 2rem;
+    font-family: "Libre Franklin", sans-serif;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $color-red-blood;
+    }
+  }
+}
