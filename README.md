@@ -4,7 +4,7 @@ Aquamob NOLA is a website created for New Orlean's Premier Community Dystopian H
 
 Some of the features of the site include:
 
-1. A hero section painted with a canvas element which bleeds blood!\
+1. A hero section painted with a canvas element which bleeds!\
     &nbsp;&nbsp;&nbsp;&nbsp;-See the blood.js file in the js folder for the code.
 2. Lazy loading images which appear with small animations on scroll.
 3. A contact form which is equipped with Google reCAPTCHA verification to prevent spam from bots.
