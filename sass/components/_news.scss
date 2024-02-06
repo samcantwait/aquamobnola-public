@@ -1,0 +1,66 @@
+.news {
+  &__article {
+    background-color: #000000ae;
+    width: 75%;
+    margin: auto;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    transform: translateY(30rem);
+    opacity: 0;
+    transition: all 2s;
+  }
+
+  &__rule {
+    width: 100%;
+    height: 2rem;
+    background-color: $color-red-blood;
+  }
+
+  &__site {
+    font-size: 1.3rem;
+    padding: 2rem 1rem 1rem;
+  }
+
+  &__headline {
+    padding: 0 1rem 2rem;
+    font-size: 2.1rem;
+    font-weight: 400;
+  }
+
+  &__link {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+  }
+
+  &__body {
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: $color-black;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include responsive(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 50%;
+    max-width: 23rem;
+    padding: 0 2rem;
+
+    @include responsive(tab-port) {
+      padding: 1rem 0 0;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__date {
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
+}
